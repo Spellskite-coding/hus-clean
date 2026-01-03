@@ -25,7 +25,7 @@
    Télécharge la dernière version depuis les [releases GitHub](https://github.com/ton-repo/hus-clean/releases).
 
 
-🚀 Utilisation :
+## 🚀 Utilisation :
 
 Lance Hus-Clean (HusClean.exe).
 Clique sur "Scanner" pour lister les fichiers temporaires et cookies.
@@ -34,13 +34,13 @@ Clique sur "Nettoyer" et confirme.
 Vérifie : Les fichiers sélectionnés sont supprimés (sauf s'ils sont verrouillés par un navigateur ouvert).
 
 
-⚠️ Attention :
+## ⚠️ Attention :
 
 Ferme tes navigateurs avant de nettoyer les cookies.
 Hus-Clean ne supprime que les fichiers listés et confirmés.
 
 
-🛠️ Compilation :
+## 🛠️ Compilation :
 
 Avec Qt Creator
 
@@ -49,7 +49,7 @@ Compile (Build > Build Project).
 L'exécutable sera généré dans build/release/.
 Intégration du manifest
 
-Le projet inclut un manifest Windows (HusClean.exe.manifest) pour :
+## Le projet inclut un manifest Windows (HusClean.exe.manifest) pour :
 
 Éviter les demandes UAC.
 Décrire clairement l'outil aux antivirus.
