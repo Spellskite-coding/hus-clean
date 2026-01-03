@@ -25,7 +25,7 @@
    Télécharge la dernière version depuis les [releases GitHub](https://github.com/ton-repo/hus-clean/releases).
 
 
-🚀 Utilisation
+🚀 Utilisation :
 
 Lance Hus-Clean (HusClean.exe).
 Clique sur "Scanner" pour lister les fichiers temporaires et cookies.
@@ -33,12 +33,15 @@ Coche les cases des fichiers à supprimer.
 Clique sur "Nettoyer" et confirme.
 Vérifie : Les fichiers sélectionnés sont supprimés (sauf s'ils sont verrouillés par un navigateur ouvert).
 
+
 ⚠️ Attention :
 
 Ferme tes navigateurs avant de nettoyer les cookies.
 Hus-Clean ne supprime que les fichiers listés et confirmés.
 
-🛠️ Compilation
+
+🛠️ Compilation :
+
 Avec Qt Creator
 
 Ouvre le projet hus-clean.pro.
