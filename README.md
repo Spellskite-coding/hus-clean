@@ -22,7 +22,7 @@
 
 ### Téléchargement
 **Version précompilée** :
-  Clone ce dépôt ou télécharge le .zip en cliquant sur "Code" → "Download ZIP" ou télécharge la dernière version depuis les [releases GitHub](https://github.com/Spellskite-coding/hus-clean/releases/).
+  Clone ce dépôt ou télécharge le .zip en cliquant sur "Code" → "Download ZIP" !
 
 
 ## 🚀 Utilisation :
@@ -31,7 +31,7 @@ Lance Hus-Clean (HusClean.exe).
 Clique sur "Scanner" pour lister les fichiers temporaires et cookies.
 Coche les cases des fichiers à supprimer.
 Clique sur "Nettoyer" et confirme.
-Vérifie : Les fichiers sélectionnés sont supprimés (sauf s'ils sont verrouillés par un navigateur ouvert).
+Vérifie : Les fichiers sélectionnés sont supprimés (sauf s'ils sont verrouillés par un navigateur ouvert ou un fichier système en cours d'utilisation).
 
 
 ## ⚠️ Attention :
