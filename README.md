@@ -53,4 +53,4 @@ Intégration du manifest
 
 Éviter les demandes UAC et décrire clairement l'outil aux antivirus.
 
-© 2026 Spellskite-coding et Thomas Scholl (https://github.com/Skoll1470) et Marwane Toury (https://github.com/MarwaneToury).
+© 2026 Spellskite-coding (https://github.com/Spellskite-coding) & Thomas Scholl (https://github.com/Skoll1470) & Marwane Toury (https://github.com/MarwaneToury).
