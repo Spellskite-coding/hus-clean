@@ -1,0 +1,13 @@
+[package]
+name = "hus-clean-core"
+version = "0.1.0"
+edition = "2021"
+description = "Logique de scan et de nettoyage de Hus-Clean (sans dependance GUI)."
+license = "MIT"
+
+[dependencies]
+trash = "5"
+sysinfo = { version = "0.32", default-features = false, features = ["system"] }
+
+[dev-dependencies]
+tempfile = "3"

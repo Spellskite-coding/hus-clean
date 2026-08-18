@@ -1,0 +1,16 @@
+# Build Rust (regenerable, plusieurs Go, ne doit jamais etre commite)
+target/
+
+# Dossier de travail/scratch a la racine (Dockerfiles de reference vivent
+# dans src/docker/, ceci ne garde que les artefacts de test locaux : demo
+# screenshots, copie servie par le serveur HTTP de test).
+/docker/
+
+# Copies de travail a la racine (dupliquees dans src/ pour le depot :
+# la racine garde ces fichiers pour continuer a compiler/tester
+# localement sans les committer deux fois).
+/Cargo.toml
+/Cargo.lock
+/.cargo/
+/crates/
+/assets/

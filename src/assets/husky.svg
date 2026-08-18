@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <clipPath id="badge">
+      <rect x="0" y="0" width="512" height="512" rx="112" ry="112"/>
+    </clipPath>
+  </defs>
+
+  <!-- Fond du badge : meme gris fonce que la fenetre de l'appli -->
+  <rect x="0" y="0" width="512" height="512" rx="112" ry="112" fill="#353535"/>
+
+  <g clip-path="url(#badge)">
+    <!-- Oreilles -->
+    <polygon points="118,96 232,244 96,258" fill="#2a2a2a"/>
+    <polygon points="394,96 280,244 416,258" fill="#2a2a2a"/>
+    <polygon points="140,140 220,238 128,232" fill="#e8e8e8"/>
+    <polygon points="372,140 292,238 384,232" fill="#e8e8e8"/>
+
+    <!-- Tete -->
+    <ellipse cx="256" cy="300" rx="150" ry="132" fill="#e8e8e8"/>
+
+    <!-- Capuchon sombre continu (part des oreilles, descend jusqu'au-dessus
+         des yeux) : c'est ce motif d'un seul tenant, et non deux taches
+         isolees autour des yeux, qui fait la difference husky / raton-laveur. -->
+    <path d="M 118,150 Q 130,110 175,120 L 232,220
+             Q 256,205 280,220 L 337,120
+             Q 382,110 394,150
+             Q 400,220 350,255
+             Q 320,278 290,268
+             Q 300,235 256,232
+             Q 212,235 222,268
+             Q 190,278 162,255
+             Q 112,220 118,150 Z" fill="#3d3d3d"/>
+
+    <!-- Liseret clair (typique husky) descendant du front entre les yeux -->
+    <path d="M 256,178 Q 278,190 270,240 Q 264,275 256,296
+             Q 248,275 242,240 Q 234,190 256,178 Z" fill="#f2f2f2"/>
+
+    <!-- Yeux bleus, poses sur le capuchon sombre -->
+    <ellipse cx="196" cy="272" rx="28" ry="24" fill="#ffffff"/>
+    <ellipse cx="316" cy="272" rx="28" ry="24" fill="#ffffff"/>
+    <circle cx="196" cy="274" r="16" fill="#2a82da"/>
+    <circle cx="316" cy="274" r="16" fill="#2a82da"/>
+    <circle cx="196" cy="274" r="7" fill="#10151a"/>
+    <circle cx="316" cy="274" r="7" fill="#10151a"/>
+    <circle cx="190" cy="266" r="4.5" fill="#ffffff"/>
+    <circle cx="310" cy="266" r="4.5" fill="#ffffff"/>
+
+    <!-- Museau -->
+    <ellipse cx="256" cy="342" rx="76" ry="58" fill="#ffffff"/>
+
+    <!-- Truffe -->
+    <ellipse cx="256" cy="328" rx="19" ry="14" fill="#1a1a1a"/>
+
+    <!-- Bouche -->
+    <path d="M 222,358 Q 256,382 290,358" stroke="#1a1a1a" stroke-width="7" fill="none" stroke-linecap="round"/>
+
+    <!-- Langue -->
+    <path d="M 240,372 Q 256,398 272,372 Z" fill="#e88ea0"/>
+  </g>
+</svg>

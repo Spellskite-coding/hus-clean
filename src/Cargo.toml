@@ -1,0 +1,14 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/hus-clean-core",
+    "crates/hus-clean-gui",
+]
+
+# Pas de profil release personnalise : les reglages par defaut de Cargo
+# (opt-level=3, pas de LTO, codegen-units=16, panic=unwind, symboles
+# conserves) produisent un executable dont la structure est plus proche de
+# celle d'un logiciel Windows ordinaire. Les reglages agressifs
+# (opt-level="z" + LTO complet + codegen-units=1 + strip) rendaient le
+# binaire plus dense/homogene, un profil que certains classifieurs
+# heuristiques anti-malware associent a du "packing".

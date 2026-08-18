@@ -1,0 +1,5 @@
+[target.x86_64-pc-windows-msvc]
+# Lie statiquement le runtime C (VCRUNTIME/UCRT) : l'exe reste autonome,
+# sans dependre de "Microsoft Visual C++ Redistributable" installe ou non
+# sur la machine cible.
+rustflags = ["-C", "target-feature=+crt-static"]
