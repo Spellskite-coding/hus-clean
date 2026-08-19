@@ -72,4 +72,4 @@ cargo xwin build --release --target x86_64-pc-windows-msvc
 
 ---
 
-© 2026 Spellskite-coding (https://github.com/Spellskite-coding).
+© 2026 Spellskite-coding (https://github.com/Spellskite-coding) & Marwane Toury (https://github.com/MarwaneToury).
