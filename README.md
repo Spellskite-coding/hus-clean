@@ -1,61 +1,61 @@
 # Hus-Clean
 
-**Hus-Clean** est un outil léger et sécurisé pour nettoyer les fichiers temporaires et les cookies/cache inutiles (publicités, trackers) sur Windows. Cette version est une réécriture complète en **Rust**, conçue pour être plus robuste, plus légère et plus respectueuse de la vie privée que la version C++/Qt d'origine.
+**Hus-Clean** is a lightweight, secure tool for cleaning up temporary files and unwanted cookies/cache (ads, trackers) on Windows. This version is a complete rewrite in **Rust**, designed to be more robust, lighter and more privacy-respecting than the original C++/Qt version.
 
 ---
 
-## 📌 Fonctionnalités
+## 📌 Features
 
-- **Nettoyage des fichiers temporaires** (`%TEMP%`, `%LOCALAPPDATA%\Temp`), scan **récursif** (sous-dossiers inclus).
-- **Suppression des cookies indésirables** (Chrome, Firefox, Brave, Edge, Opera, Vivaldi), avec détection de **plusieurs profils** par navigateur.
-- **Nettoyage du cache des navigateurs**, en plus des cookies.
-- **Envoi à la corbeille** plutôt que suppression définitive : possibilité d'annuler.
-- **Sélection individuelle des fichiers** avant nettoyage (case à cocher par élément).
-- **Interface intuitive** avec confirmation avant toute suppression.
-- **Pas de droits administrateur requis** (pas de demande UAC).
-- **Aucune connexion réseau** : zéro télémétrie, par construction.
-- **Transparence totale** : aucun fichier n'est supprimé sans confirmation explicite.
+- **Temporary file cleanup** (`%TEMP%`, `%LOCALAPPDATA%\Temp`), **recursive** scan (subfolders included).
+- **Removal of unwanted cookies** (Chrome, Firefox, Brave, Edge, Opera, Vivaldi), with detection of **multiple profiles** per browser.
+- **Browser cache cleanup**, in addition to cookies.
+- **Sent to the recycle bin** rather than permanently deleted: can be undone.
+- **Individual file selection** before cleanup (checkbox per item).
+- **Intuitive interface** with confirmation before any deletion.
+- **No administrator rights required** (no UAC prompt).
+- **No network connection**: zero telemetry, by design.
+- **Full transparency**: no file is deleted without explicit confirmation.
 
 ---
 
 ## 📥 Installation
 
-### Prérequis
+### Requirements
 - Windows 10/11.
 
-### Téléchargement
-Récupère simplement **`hus-clean.exe`** à la racine de ce dépôt et place-le où tu veux sur ton ordinateur. C'est un exécutable unique et autonome : pas d'archive à décompresser, pas de dossier de `.dll` à côté.
+### Download
+Simply grab **`hus-clean.exe`** at the root of this repository and place it wherever you want on your computer. It's a single, standalone executable: no archive to unpack, no folder of `.dll` files alongside it.
 
-Voir **`Procédure Hus-Clean.pdf`** pour un guide pas à pas illustré (téléchargement, déblocage Windows, utilisation).
-
----
-
-## 🚀 Utilisation
-
-1. Lance `hus-clean.exe`.
-2. Clique sur **"Scanner"** et choisis ce que tu veux analyser (fichiers temporaires / cookies / cache).
-3. Décoche les éléments que tu veux conserver.
-4. Clique sur **"Nettoyer"** et confirme.
-5. Les éléments sélectionnés sont envoyés à la corbeille (sauf ceux verrouillés par un navigateur ouvert ou un fichier système en cours d'utilisation, clairement signalés).
+See **`Procédure Hus-Clean.pdf`** for a step-by-step illustrated guide (download, unblocking on Windows, usage).
 
 ---
 
-## ⚠️ Attention
+## 🚀 Usage
 
-- Ferme tes navigateurs avant de nettoyer leurs cookies/cache.
-- Le logiciel n'étant pas signé numériquement (signature de code payante), Windows peut afficher un avertissement au premier lancement (blocage "provient d'un autre ordinateur" + SmartScreen) : voir la procédure PDF pour les débloquer, c'est normal pour tout logiciel gratuit non signé.
+1. Launch `hus-clean.exe`.
+2. Click **"Scan"** and choose what you want to analyze (temporary files / cookies / cache).
+3. Uncheck the items you want to keep.
+4. Click **"Clean"** and confirm.
+5. The selected items are sent to the recycle bin (except those locked by an open browser or a system file currently in use, which are clearly flagged).
 
 ---
 
-## 🛠️ Compilation depuis les sources
+## ⚠️ Note
 
-Le code source se trouve dans le dossier [`src/`](src/). C'est un projet Rust (workspace Cargo) :
+- Close your browsers before cleaning their cookies/cache.
+- Since the software isn't digitally signed (code signing is paid), Windows may show a warning on first launch ("came from another computer" block + SmartScreen): see the PDF guide to unblock it — this is normal for any free, unsigned software.
 
-- `src/crates/hus-clean-core` : logique de scan et de nettoyage, sans dépendance graphique, testable indépendamment (`cargo test`).
-- `src/crates/hus-clean-gui` : interface graphique ([egui](https://github.com/emilk/egui)/eframe).
-- `src/docker` : Dockerfiles pour reproduire l'environnement de cross-compilation (Linux → Windows, via `mingw-w64` et `cargo-xwin`/MSVC) et de test.
+---
 
-Compilation (depuis `src/`, avec le toolchain Rust + cible `x86_64-pc-windows-msvc` installée, voir `src/docker/Dockerfile`) :
+## 🛠️ Building from source
+
+The source code is in the [`src/`](src/) folder. It's a Rust project (Cargo workspace):
+
+- `src/crates/hus-clean-core`: scanning and cleaning logic, no GUI dependency, independently testable (`cargo test`).
+- `src/crates/hus-clean-gui`: graphical interface ([egui](https://github.com/emilk/egui)/eframe).
+- `src/docker`: Dockerfiles to reproduce the cross-compilation environment (Linux → Windows, via `mingw-w64` and `cargo-xwin`/MSVC) and the test environment.
+
+Build (from `src/`, with the Rust toolchain + `x86_64-pc-windows-msvc` target installed, see `src/docker/Dockerfile`):
 
 ```
 cargo xwin build --release --target x86_64-pc-windows-msvc
@@ -63,12 +63,12 @@ cargo xwin build --release --target x86_64-pc-windows-msvc
 
 ---
 
-## Sécurité
+## Security
 
-- Aucun `unsafe` dans le code du projet (vérifié via `cargo-geiger`).
-- Dépendances auditées via `cargo-audit` (base de vulnérabilités RustSec).
-- Analyse statique via `cargo clippy`.
-- Le binaire ne lie que des DLL système Windows standard, aucune dépendance externe à installer.
+- No `unsafe` in the project's code (verified via `cargo-geiger`).
+- Dependencies audited via `cargo-audit` (RustSec vulnerability database).
+- Static analysis via `cargo clippy`.
+- The binary only links against standard Windows system DLLs, no external dependency to install.
 
 ---
 
